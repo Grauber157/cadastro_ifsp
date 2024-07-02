@@ -6,7 +6,7 @@ $password = "";
 $database = "ifsp";
 $port = 3307;
 
-$link = mysqli_connect($hostname, $username, $password, $database, $port);
+$con = mysqli_connect($hostname, $username, $password, $database, $port);
 
 if(mysqli_connect_errno())
 {
