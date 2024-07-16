@@ -12,7 +12,7 @@
         include("include/conexao.php");
         $sql = "SELECT * FROM cidade";
         $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_array($result);
+        //$row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta de Cidades</h1>
     <a href="CadastroCidade.html">Cadastrar Nova Cidade</a>
@@ -21,6 +21,8 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Estado</th>
+            <th>Alterar</th>
+            <th>Deletar</th>
         </tr>
     <?php
         while($row = mysqli_fetch_array($result))
@@ -29,6 +31,8 @@
             echo "<td>".$row["id"]."</td>";
             echo "<td>".$row["nome"]."</td>";
             echo "<td>".$row["estado"]."</td>";
+            echo "<td><a href='alterarCidade.php' id=".$row['id'].">Alterar</a></td>";
+            echo "<td><a href='deletarCidade.php' id=".$row['id'].">Deletar</a></td>";
             echo "<tr>";
         }
     ?>
