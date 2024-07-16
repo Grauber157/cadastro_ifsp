@@ -7,16 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="CadastroCidade.php" method="post">
+    <form action="CadastroCliente.php" method="post">
         <fieldset>
-            <legend>Cadastro de Cidades</legend>
+            <legend>Cadastro de Alunos</legend>
             <div>
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="">
+                <label for="">Nome: </label>
+                <input type="text" name="nome"><br>
+
+                <label for="">Email: </label>
+                <input type="email" name="email"><br>
+
+                <label for="">Senha: </label>
+                <input type="password" name="senha"><br>
+
+                <input type="hidden" name="ativo" value="Sim">
+
             </div>
             <div>
-                <label for="nome">Estado</label>
-                <select name="estado" id="">
+                <label for="">Estado</label>
+                <select name="estado">
                     <option value="sp">SP</option>
                     <option value="rj">RJ</option>
                     <option value="mg">MG</option>
