@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="CadastroCliente.php" method="post">
+    <form action="CadastrarCliente.php" method="post">
         <fieldset>
             <legend>Cadastro de Alunos</legend>
             <div>
@@ -20,17 +20,9 @@
                 <label for="">Senha: </label>
                 <input type="password" name="senha"><br>
 
-                <input type="hidden" name="ativo" value="Sim">
-
+                <input type="hidden" name="ativo" value="1">
             </div>
-            <div>
-                <label for="">Estado</label>
-                <select name="estado">
-                    <option value="sp">SP</option>
-                    <option value="rj">RJ</option>
-                    <option value="mg">MG</option>
-                </select>
-            </div>
+                
             <div>
                 <input type="submit" value="Enviar">
             </div>
