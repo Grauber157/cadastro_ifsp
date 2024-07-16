@@ -22,6 +22,8 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Email</th>
+            <th>Senha</th>
+            <th>Ativo</th>
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>
@@ -31,9 +33,11 @@
             echo "<tr>";
             echo "<td>".$row['id']."</td>";
             echo "<td>".$row['nome']."</td>";
-            echo "<td>".$row['estado']."</td>";
-            echo "<td><a href='AlterarCidade.php?id=".$row['id']."'>Alterar</a></td>";
-            echo "<td><a href='DeletarCidade.php?id=".$row['id']."'>Deletar</a></td>";
+            echo "<td>".$row['email']."</td>";
+            echo "<td>".$row['senha']."</td>";
+            echo "<td>".$row['ativo']."</td>";
+            echo "<td><a href='AlterarCliente.php?id=".$row['id']."'>Alterar</a></td>";
+            echo "<td><a href='DeletarCliente.php?id=".$row['id']."'>Deletar</a></td>";
             echo "<tr>";
         }
     ?>
