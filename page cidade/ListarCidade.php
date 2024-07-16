@@ -7,15 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <button><a href="index.html">Voltar ao Menu</a></button><br>
+    <button><a href="../index.html">Voltar ao Menu</a></button><br>
     <?php
-        include("include/conexao.php");
+        include("../include/conexao.php");
         $sql = "SELECT * FROM cidade";
         $result = mysqli_query($con, $sql);
         //$row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta de Cidades</h1>
-    <a href="CadastroCidade.html">Cadastrar Nova Cidade</a>
+    <button><a href="CadastroCidade.html">Cadastrar Nova Cidade</a></button>
+    
     <table align="center" border="1" width="500">
         <tr>
             <th>Código</th>
@@ -31,8 +32,8 @@
             echo "<td>".$row["id"]."</td>";
             echo "<td>".$row["nome"]."</td>";
             echo "<td>".$row["estado"]."</td>";
-            echo "<td><a href='alterarCidade.php' id=".$row['id'].">Alterar</a></td>";
-            echo "<td><a href='deletarCidade.php' id=".$row['id'].">Deletar</a></td>";
+            echo "<td><a href='AlterarCidade.php?id=".$row['id']."'>Alterar</a></td>";
+            echo "<td><a href='DeletarCidade.php?id=".$row['id']."'>Deletar</a></td>";
             echo "<tr>";
         }
     ?>
