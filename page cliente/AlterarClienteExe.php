@@ -5,6 +5,7 @@
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $ativo = $_POST['ativo'];
+    $id_cidade = $_POST['id_cidade'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,10 @@
         echo "<p>Email: $email</p>";
         echo "<p>Senha: $senha</p>";
         echo "<p>Ativo: $ativo</p>";
-        $sql = "UPDATE cliente SET nome='$nome', email='$email', senha='$senha', ativo='$ativo' WHERE id='$id'";
+        echo "<p>Codigo Cidade: $id_cidade</p>";
+        //query SQL
+        $sql = "UPDATE cliente SET nome='$nome', email='$email', senha='$senha', ativo='$ativo' id_cidade='$id_cidade' WHERE id='$id'";
+        //função pra mandar a query
         $result = mysqli_query($con, $sql);
         if($result)
         {
