@@ -15,7 +15,7 @@
         //$row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta de Alunos</h1>
-    <button><a href="CadastroCliente.html">Cadastrar Novo Aluno</a></button>
+    <button><a href="CadastrarCliente.html">Cadastrar Novo Aluno</a></button>
     
     <table align="center" border="1" width="500">
         <tr>
