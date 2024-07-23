@@ -21,7 +21,8 @@
                 <input type="password" name="senha"><br>
 
                 <label for="">Ativo: </label>
-                <input type="checkbox" name="ativo" value="1">
+                <input type="radio" name="ativo" value="1">
+                <input type="radio" name="ativo" value="0" checked>
             </div>
 
             <div>
