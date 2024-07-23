@@ -38,12 +38,12 @@
         while($row = mysqli_fetch_array($result))
         {
             echo "<tr>";
-            echo "<td>".$row['cli.id']."</td>";
-            echo "<td>".$row['cli.nome']."</td>";
+            echo "<td>".$row['id']."</td>";
+            echo "<td>".$row['nomecliente']."</td>";
             echo "<td>".$row['email']."</td>";
             echo "<td>".$row['senha']."</td>";
             echo "<td>".$row['ativo']."</td>";
-            echo "<td>".$row['id_cidade']."</td>";
+            echo "<td>".$row['nomecidade']."</td>";
             echo "<td><a href='AlterarCliente.php?id=".$row['id']."'>Alterar</a></td>";
             echo "<td><a href='DeletarCliente.php?id=".$row['id']."'>Deletar</a></td>";
             echo "<tr>";

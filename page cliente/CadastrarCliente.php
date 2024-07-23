@@ -20,9 +20,9 @@
                 <label for="">Senha: </label>
                 <input type="password" name="senha"><br>
 
-                <label for="">Ativo: </label>
-                <input type="radio" name="ativo" value="1">
-                <input type="radio" name="ativo" value="0" checked>
+                <label for="">Situação Cliente: </label>
+                <input type="radio" name="ativo" value="1">ATIVO
+                <input type="radio" name="ativo" value="0" checked>INATIVO
             </div>
 
             <div>
