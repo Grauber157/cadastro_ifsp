@@ -14,21 +14,27 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="AlterarCidadeExe.php" method="post">
+    <form action="AlterarClienteExe.php" method="post">
         <fieldset>
             <legend>Cadastro de Clientes</legend>
             <div>
                 <label for="">Nome: </label>
-                <input type="text" name="nome" <?php echo $row['nome'] ?>><br>
+                <input type="text" name="nome" value="<?php echo $row['nome'] ?>"><br>
 
                 <label for="">Email: </label>
-                <input type="email" name="email" <?php echo $row['email'] ?>><br>
+                <input type="email" name="email" value="<?php echo $row['email'] ?>"><br>
 
                 <label for="">Senha: </label>
-                <input type="password" name="senha" <?php echo $row['senha'] ?>><br>
+                <input type="text" name="senha" value="<?php echo $row['senha'] ?>"><br>
 
                 <label for="">Ativo: </label>
-                <input type="text" name="ativo" <?php echo $row['ativo'] ?>>
+                <input type="text" name="ativo" value="<?php echo $row['ativo']?>">
+            </div>
+            <div>
+                <input type="submit" value="Alterar">
+            </div>
+            <div>
+                <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
             </div>
         </fieldset>
     </form>
