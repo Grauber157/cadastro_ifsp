@@ -10,12 +10,18 @@
     <button><a href="../index.html">Voltar ao Menu</a></button><br>
     <?php
         include("../include/conexao.php");
-        $sql = "SELECT * FROM cliente";
+
+        $sql = "SELECT cli.id, cli.nome nomecliente, cli.email, cli.ativo,
+                cid.nome nomecidade, cid.estado
+                FROM cliente cli
+                LEFT JOIN cidade cid on cid.id = cli.id_cidade";
+
         $result = mysqli_query($con, $sql);
         //$row = mysqli_fetch_array($result);
+
     ?>
     <h1>Consulta de Alunos</h1>
-    <button><a href="CadastrarCliente.html">Cadastrar Novo Aluno</a></button>
+    <button><a href="CadastrarCliente.php">Cadastrar Novo Aluno</a></button>
     
     <table align="center" border="1" width="500">
         <tr>
@@ -24,7 +30,7 @@
             <th>Email</th>
             <th>Senha</th>
             <th>Ativo</th>
-            <th>Codigo Cidade</th>
+            <th>Cidade</th>
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>
@@ -32,8 +38,8 @@
         while($row = mysqli_fetch_array($result))
         {
             echo "<tr>";
-            echo "<td>".$row['id']."</td>";
-            echo "<td>".$row['nome']."</td>";
+            echo "<td>".$row['cli.id']."</td>";
+            echo "<td>".$row['cli.nome']."</td>";
             echo "<td>".$row['email']."</td>";
             echo "<td>".$row['senha']."</td>";
             echo "<td>".$row['ativo']."</td>";
