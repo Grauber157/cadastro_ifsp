@@ -24,9 +24,9 @@
             <div>
                 <label for="nome">Estado</label>
                 <select name="estado" id="">
-                    <option value="sp" <?php echo $row['estado'] == "SP" ? "selected" : "" ?>>SP</option>
-                    <option value="rj" <?php echo $row['estado'] == "RJ" ? "selected" : "" ?>>RJ</option>
-                    <option value="mg" <?php echo $row['estado'] == "MG" ? "selected" : "" ?>>MG</option>
+                    <option value="SP" <?php echo $row['estado'] == "SP" ? "selected" : "" ?>>SP</option>
+                    <option value="RJ" <?php echo $row['estado'] == "RJ" ? "selected" : "" ?>>RJ</option>
+                    <option value="MG" <?php echo $row['estado'] == "MG" ? "selected" : "" ?>>MG</option>
                 </select>
             </div>
             <div>
