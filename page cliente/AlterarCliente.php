@@ -27,8 +27,22 @@
                 <label for="">Senha: </label>
                 <input type="text" name="senha" value="<?php echo $row['senha'] ?>"><br>
 
-                <label for="">Ativo: </label>
-                <input type="text" name="ativo" value="<?php echo $row['ativo']?>">
+                <label for="">Situação Cliente: </label>
+
+                <input type="radio" name="ativo" value="1">ATIVO
+                <input type="radio" name="ativo" value="0">INATIVO<br>
+                
+                <label for="cidade">Cidade: </label>
+                <select name="cidade" id="cidade">
+                    <?php 
+                        $sql2 = "SELECT * FROM cidade";
+                        $result2 = mysqli_query($con, $sql2);
+                        while($row2 = mysqli_fetch_array($result2))
+                        {
+                            echo "<option value='".$row2['id']."'>".$row2['nome']."/".$row2['estado']."</option>";
+                        }
+                    ?>
+                </select>
             </div>
             <div>
                 <input type="submit" value="Alterar">

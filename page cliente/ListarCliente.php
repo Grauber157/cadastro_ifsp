@@ -28,22 +28,23 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Email</th>
-            <th>Senha</th>
             <th>Ativo</th>
             <th>Cidade</th>
+            <th>Estado</th>
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>
     <?php
         while($row = mysqli_fetch_array($result))
         {
+            $ativo = $row['ativo'] == 1 ? "Sim": "Não";
             echo "<tr>";
             echo "<td>".$row['id']."</td>";
             echo "<td>".$row['nomecliente']."</td>";
             echo "<td>".$row['email']."</td>";
-            echo "<td>".$row['senha']."</td>";
-            echo "<td>".$row['ativo']."</td>";
+            echo "<td>".$ativo."</td>";
             echo "<td>".$row['nomecidade']."</td>";
+            echo "<td>".$row['estado']."</td>";
             echo "<td><a href='AlterarCliente.php?id=".$row['id']."'>Alterar</a></td>";
             echo "<td><a href='DeletarCliente.php?id=".$row['id']."'>Deletar</a></td>";
             echo "<tr>";
