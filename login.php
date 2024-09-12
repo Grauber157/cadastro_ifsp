@@ -15,7 +15,7 @@
         {
             include('inicia_sessao.php');
             $_SESSION['login'] = $row;
-            header('location: index.php');
+            header('location: menu.php');
         }
         else
         {

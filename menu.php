@@ -17,7 +17,11 @@
                 include('inicia_sessao.php');
                 if(empty($_SESSION['login'])):
             ?>
-            <li><a href=""></a></li>
+            <li><a href="CadastroCidade.php">Cadastrar Cidade</a></li>
+            <li><a href="CadastroCidade.php">Cadastrar Cidade</a></li>
+            <li><a href="CadastroCidade.php">Cadastrar Cidade</a></li>
+            <li><a href="CadastroCidade.php">Cadastrar Cidade</a></li>
+            <li><a href="CadastroCidade.php">Cadastrar Cidade</a></li>
 
 
             <?php
