@@ -3,3 +3,28 @@
 
 5. DESTRUIR A SESSÃO
     session_destroy();
+
+
+///BANCO DE DADOS IHIHIHIHI///
+CREATE TABLE usuario (
+id int NOT NULL AUTO INCREMENT,
+nome varchar(50) NOT NULL,
+email varchar(255) NOT NULL,
+senha varchar(60) NOT NULL,
+data criacao datetime NOT NULL DEFAULT CURRENT. TIMESTAMP,
+ativo tinyint NOT NULL DEFAULT '6',
+adm tinyint NOt NULL DEFAULT '6',
+PRIMARY KEY (id)
+);
+
+CREATE TABLE post (
+id int NOT NULL AUTO INCREMENT,
+titulo varchar(255) NOT NULL,
+texto text NOT NULL,
+usuario id int NOT NULL,
+data criacao datetime NOT NULL DEFAULT CURRENT. TIMESTAMP,
+data postagem datetime NOT NULL,
+PRIMARY KEY (id),
+KEY fk post usuario idx (usuario id),
+CONSTRAINT fk post usuario FOREIGN KEY (usuario id) REFERENCES usuario (id)
+);
