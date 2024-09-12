@@ -1,0 +1,14 @@
+1.
+
+
+2.
+
+
+3. LER DADOS DA SESSÃo
+
+
+4. LIMPAR DADOS DA SESSÃO
+    session_unset();
+
+5. DESTRUIR A SESSÃO
+    session_destroy();
