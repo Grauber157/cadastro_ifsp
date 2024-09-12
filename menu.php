@@ -7,18 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+
+
     <div>
         <ul>
             <li><a href="index.php">Home</a></li>
 
             <?php
                 include('inicia_sessao.php');
-                if(empty($_SESSION['login']))
-                {
-                    header("location: login.php");
-                }
+                if(empty($_SESSION['login'])):
+            ?>
+            <li><a href=""></a></li>
+
+
+            <?php
+                echo "<li><a> Olá ". $_SESSION['login']['nome'] ."</a></li>";
+                endif;
             ?>
         </ul>
     </div>
+
+
 </body>
 </html>
