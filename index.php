@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php
+        include('inicia_sessao.php');
+        if(empty($_SESSION['login']))
+        {
+            header("Location: login.php");
+        }
+    ?>
+
     <h2>IFSP: </h2>
     <div>
         <h3>Cidades:</h3>
