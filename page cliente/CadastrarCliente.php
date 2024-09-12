@@ -26,7 +26,7 @@
             </div>
 
             <div>
-                <label for="cidade">Cidade: abel>
+                <label for="cidade">Cidade: </label>
                 <select name="cidade" id="cidade">
                     <?php 
                         include('../include/conexao.php');
